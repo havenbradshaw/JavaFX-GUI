@@ -1,7 +1,7 @@
 package com.example;
 
-
-public class Circle {
+// Represents a drawable circle shape.
+public class Circle implements DrawableShape {
     private final double centerX;
     private final double centerY;
     private final double radius;
@@ -26,7 +26,10 @@ public class Circle {
         return radius;
     }
 
+
+    // Returns the color of the circle.
+    @Override
     public String getColor() {
-        return color;
+        return this.color;
     }
 }

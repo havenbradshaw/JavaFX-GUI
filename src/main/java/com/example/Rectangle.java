@@ -1,6 +1,8 @@
 package com.example;
 
-public class Rectangle {
+
+// Represents a drawable rectangle shape.
+public class Rectangle implements DrawableShape {
     private final double x;
     private final double y;
     private final double width;
@@ -31,7 +33,8 @@ public class Rectangle {
         return height;
     }
 
+    @Override
     public String getColor() {
-        return color;
+        return this.color;
     }
 }
