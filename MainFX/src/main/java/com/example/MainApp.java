@@ -85,17 +85,11 @@ public class MainApp extends Application {
         // Keyboard shortcuts
         scene.setOnKeyPressed(event -> {
             switch (event.getCode()) {
-                case C:
-                    clearButton.fire();
-                    break;
-                case R:
-                    rectRadio.setSelected(true);
-                    break;
-                case O:
-                    circleRadio.setSelected(true);
-                    break;
-                default:
-                    break;
+                case C -> clearButton.fire();
+                case R -> rectRadio.setSelected(true);
+                case O -> circleRadio.setSelected(true);
+                default -> {
+            }
             }
         });
         primaryStage.setTitle("Shape Drawing App");
