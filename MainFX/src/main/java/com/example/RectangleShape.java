@@ -18,9 +18,9 @@ public class RectangleShape implements DrawableShape {
 
     @Override
     public void draw(GraphicsContext gc) {
-        gc.setFill(Color.FORESTGREEN); // Fill color
+        gc.setFill(Color.DARKOLIVEGREEN); // Fill color
         gc.fillRect(x, y, width, height);
-        gc.setStroke(Color.BLACK); // Outline color
+        gc.setStroke(Color.LIGHTGOLDENRODYELLOW); // Outline color
         gc.strokeRect(x, y, width, height);
     }
 

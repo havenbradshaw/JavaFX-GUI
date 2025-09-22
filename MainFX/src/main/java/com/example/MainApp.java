@@ -20,7 +20,7 @@ public class MainApp extends Application {
     Label statusLabel = new Label("Current shape: Rectangle");
         
 
-        Canvas canvas = new Canvas(600, 400);
+        Canvas canvas = new Canvas(400, 400);
         
         //creates drawingcontroller object to keep up with shapes
         DrawingController drawingController = new DrawingController();

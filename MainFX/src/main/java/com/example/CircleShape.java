@@ -16,9 +16,9 @@ public class CircleShape implements DrawableShape {
 
     @Override
     public void draw(GraphicsContext gc) {
-        gc.setFill(Color.CRIMSON); // Fill color
+        gc.setFill(Color.FLORALWHITE); // Fill color
         gc.fillOval(x - r, y - r, 2 * r, 2 * r);
-        gc.setStroke(Color.GOLD); // Outline color
+        gc.setStroke(Color.DARKSEAGREEN); // Outline color
         gc.strokeOval(x - r, y - r, 2 * r, 2 * r);
     }
 
