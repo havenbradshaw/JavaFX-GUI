@@ -20,9 +20,9 @@ public class MainApp extends Application {
     Label statusLabel = new Label("Current shape: Rectangle");
         
 
-        Canvas canvas = new Canvas(400, 400);
+        Canvas canvas = new Canvas(600, 400);
         
-        //creates drawingcontroller object to keep up with shapes
+        //creates drawingController object to keep up with shapes
         DrawingController drawingController = new DrawingController();
         
         // creates label to count shapes
@@ -43,9 +43,11 @@ public class MainApp extends Application {
         // ToggleGroup and RadioButtons for shape selection
         ToggleGroup shapeToggleGroup = new ToggleGroup();
         RadioButton rectRadio = new RadioButton("Rectangle");
+
         rectRadio.setToggleGroup(shapeToggleGroup);
         rectRadio.setSelected(true);
         rectRadio.setTooltip(new Tooltip("Draw rectangles on the canvas"));
+        
         RadioButton circleRadio = new RadioButton("Circle");
         circleRadio.setToggleGroup(shapeToggleGroup);
         circleRadio.setTooltip(new Tooltip("Draw circles on the canvas"));
@@ -62,7 +64,8 @@ public class MainApp extends Application {
         // Draw shape on mouse click and remember it
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, event -> {
             if (rectRadio.isSelected()) {
-                RectangleShape rectangle = new RectangleShape(event.getX(), event.getY(), 60, 40);
+                double w = 60, h = 40;
+                RectangleShape rectangle = new RectangleShape(event.getX() - w/2, event.getY() - h/2, w, h);
                 drawingController.addShape(rectangle);
             } else {
                 CircleShape circle = new CircleShape(event.getX(), event.getY(), 30);
@@ -75,7 +78,7 @@ public class MainApp extends Application {
         });
 
         // Layout for top controls
-    HBox topControls = new HBox(10, clearButton, rectRadio, circleRadio, countLabel, statusLabel, areaLabel);
+    HBox topControls = new HBox(15, clearButton, rectRadio, circleRadio, countLabel, statusLabel, areaLabel);
     topControls.setPadding(new Insets(10));
 
         BorderPane root = new BorderPane();
@@ -92,6 +95,7 @@ public class MainApp extends Application {
             }
             }
         });
+
         primaryStage.setTitle("Shape Drawing App");
         primaryStage.setScene(scene);
         primaryStage.show();

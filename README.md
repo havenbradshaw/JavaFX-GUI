@@ -1,10 +1,9 @@
 # JavaFX-GUI  
-The reason I designed my GUI with an HBox at the top of the borderpane was that when all the controls were anywhere else, the canvas  
-looked very clustered. The Drawable shape interface allows for easy scaling if there were ever to be another shape added, along with the   
-drawingController class that keeps up with any shapes and gets the area with a binded label.   
-Feature Overview:  
-The features I included in my GUI were the two radio buttons and a clear button that also function with keyboard input. There is also a counter that keeps   
-up with the shapes and the total area of all the shapes combined.  
-Run with terminal: C:\JavaFX-GUI\MainFX> mvn clean javafx:run   
-all three levels were completed  
-AI Reflection on Google Doc
+So, due to my technological issues, I was not able to create this GUI foundationally, I only had the time to make tweaks. However, if I had built this GUI, the way that this is structured (VBox, HBox, etc.), this is extremely similar to how I would design it. The spacing is fine and the labels are clear. I did however change the colors of the shapes to make them more cohesive, and the population location for the rectangles. I didn't like how they populated from the upper left corner, so I altered the drawing method instance for retangles specifically.
+
+If I had more time on this project, and if I had not had the issues I encountered, I was planning on altering the entire set-up. I wanted to make it less "bare-bones" and more pleasing to look at for the user.
+
+Overview:
+The features included in this GUI are two radio buttons (rectangle and circle) and a 'clear' button that also function with keyboard input. There is also a counter that keeps up with the shapes and the total area of all the shapes combined. Shapes can be 'drawn' by clicking your mouse. 'c', 'r', and 'o' access the clear function, rectangle radio button, and circle radio button respectively.
+
+All three levels were completed.
